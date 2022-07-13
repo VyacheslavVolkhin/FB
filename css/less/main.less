@@ -1,0 +1,242 @@
+:root {
+	--clr-base: #111;
+	--clr-att: #FF8282;
+    --clr-att-second: #6FDFA9;//green
+    --clr-att-third:  #FFA95A;;//orange
+    --clr-att-button:  #FFB13B;;//orange button
+    --clr-att-button-hover:  #f0b02b;;//orange button
+	--clr-light: #565656;
+
+	--min: 360px;
+	--max: 1340px;
+    
+    --paddingContainer: 15px;
+
+	font-size: 10px;
+}
+.sl-wrap~.sl-wrap {
+	display: none;
+}
+.elm-hidden {
+	display: none;
+}
+.shadow() {
+    box-shadow: 0px 15px 70px rgba(12, 35, 70, 0.08);
+}
+.gr {
+    background: linear-gradient(92.44deg, #43B1FF 0%, #29A5FF 100%);
+}
+/* ----------------------------------- *\
+			main styles
+\* ----------------------------------- */
+body {
+	color: var(--clr-base);
+	background: #fff;
+    font-size: 15px;
+    line-height: 22/15;
+}
+p, ul, ol, table, blockquote, .bq-text {
+	position: relative;
+    margin-bottom: 22/15em;
+	img {
+		max-width: 100%;
+	}
+	&:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+li {
+	position: relative;
+    padding-top: 14px;
+    margin-bottom: 24px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -4px;
+        background-color: var(--clr-att-second);
+    }
+}
+a {
+	text-decoration: none;
+	color: var(--clr-att);
+	&:hover {
+		text-decoration: none;
+		color: var(--clr-att);
+	}
+}
+a.link-main, .link-main {
+	text-decoration: none;
+	border-bottom: 1px solid;
+	&:hover {
+		border-bottom: none;
+	}
+}
+.link-phone {
+    white-space: nowrap;
+}
+h1, .h1-title,
+h2, .h2-title,
+h3, .h3-title,
+h4, .h4-title,
+h5, .h5-title,
+h6, .h6-title {
+	display: block;
+	position: relative;
+    font-weight: bold;
+    margin: 1em 0;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+.h1-title, h1 {
+    font-size: 28px;
+    line-height: 36/28;
+}
+.h2-title, h2 {
+    font-size: 24px;
+    line-height: 32/24;
+}
+.h3-title, h3 {
+    font-size: 22px;
+    line-height: 26/22;
+}
+.h4-title, h4 {
+    font-size: 16px;
+    line-height: 24/16;
+}
+.text-att, .title-att {
+    color: var(--clr-att);
+}
+.text-light, .title-light {
+    color: var(--clr-light);
+}
+.text-center, .title-center {
+    text-align: center;
+}
+.text-lighten, .title-lighten {
+    font-weight: 400;
+}
+.text-decor, .title-decor {
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: baseline;
+    position: relative;
+    z-index: 2;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-radius: 2px;
+        height: 3px;
+        background-color: #FF8282;
+        z-index: -1;
+    }
+}
+@media (max-width: 1399px) {
+    :root {
+        font-size: 9.5px;
+    }
+}
+@media (max-width: 1199px) {
+    :root {
+        font-size: 9px;
+    }
+}
+@media (max-width: 1023px) {
+    :root {
+        font-size: 8px;
+    }
+}
+@media (max-width: 767px) {
+    :root {
+        font-size: 7px;
+    }
+}
+@media (min-width: 1024px) {
+    :root {
+        --paddingContainer: 30px;
+    }
+    body {
+        font-size: 1.8rem;
+    }
+    li {
+        padding: 0 0 0 20px;
+        margin-bottom: 20px;
+        &:before {
+            left: 0;
+            top: 0.75em;
+            margin: -4px 0 0 0;
+        }
+    }
+    .h1-title, h1 {
+        font-size: 6.7rem;
+        line-height: 128/97;
+    }
+    .h2-title, h2 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        &.title-small {
+            font-size: 3rem;
+            line-height: 36/30;
+            .title-decor {
+                &:before {
+                    height: 3px;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+    .h3-title, h3 {
+        font-size: 3rem;
+        line-height: 40/32;
+    }
+    .h4-title, h4 {
+        font-size: 20px;
+        line-height: 28/20;
+    }
+    .title-decor-main {
+        position: relative;
+        display: inline;
+        border-bottom: 4px solid #F13C3C;
+        .title-decor {
+            display: inline;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .text-decor, .title-decor {
+        &:before {
+            height: 0.6rem;
+            border-radius: 0.3rem;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .h1-title, h1 {
+        font-size: 9.7rem;
+    }
+    .h2-title, h2 {
+        font-size: 4rem;
+        line-height: 1.2;
+        &.title-large {
+            font-size: 5rem;
+            line-height: 54/50;
+        }
+    }
+    .h3-title, h3 {
+        font-size: 3.6rem;
+    }
+}
