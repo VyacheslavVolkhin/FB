@@ -168,6 +168,21 @@
     border-radius: 16px;
     background-color: #F6FAFB;
     .shadow();
+    &:before {
+        content: "";
+        opacity: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 152px auto;
+        background-image: url("data:image/svg+xml,%3Csvg width='152' height='100' viewBox='0 0 152 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='0.4' cx='94.5' cy='94.5' r='94' stroke='url(%23paint0_linear_532_74)' stroke-dasharray='6 6'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_532_74' x1='94.5' y1='0' x2='94.5' y2='189' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%235ABAFF'/%3E%3Cstop offset='1' stop-color='%2330A9FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
     &.tile-att {
         background-color: #55FA7B;
     }
@@ -195,6 +210,21 @@
     padding: 28px 20px 26px 20px;
     text-align: center;
     .shadow();
+    &:before {
+        opacity: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 123px auto;
+        background-image: url("data:image/svg+xml,%3Csvg width='123' height='111' viewBox='0 0 123 111' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='0.6' cx='94.5' cy='94.5' r='94' stroke='url(%23paint0_linear_532_210)' stroke-dasharray='6 6'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_532_210' x1='94.5' y1='0' x2='94.5' y2='189' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%235ABAFF'/%3E%3Cstop offset='1' stop-color='%2330A9FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
     .tile-ico {
         display: block;
         margin: 0 auto 16px auto;
@@ -249,6 +279,10 @@
     overflow: hidden;
     background-color: #F1F7F9;
     color: var(--clr-light);
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    background-size: 60px auto;
+    background-image: url("data:image/svg+xml,%3Csvg width='131' height='132' viewBox='0 0 131 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='46' cy='85' r='84.5' stroke='%23FFA73F' stroke-dasharray='6 6'/%3E%3C/svg%3E%0A");
     .tile-photo-wrap, .tile-photo {
         position: absolute;
         top: 0;
@@ -301,6 +335,19 @@
     text-align: center;
     font-weight: 500;
     .shadow();
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 1060px auto;
+        background-image: url("data:image/svg+xml,%3Csvg width='1060' height='316' viewBox='0 0 1060 316' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='68.5' cy='4.5' r='184' stroke='%23D2D2D2' stroke-dasharray='6 6'/%3E%3Ccircle cx='1028.5' cy='296.5' r='122' stroke='%23D2D2D2' stroke-dasharray='6 6'/%3E%3C/svg%3E%0A");
+    }
     .tile-title {
         margin-bottom: 16px;
     }
@@ -309,6 +356,7 @@
     border-radius: 16px;
     min-height: 100%;
     padding: 16px 16px 24px 20px;
+    background-color: #fff;
     .shadow();
     .tile-title {
         margin-bottom: 12px;
@@ -488,6 +536,14 @@
         font-size: 16px;
         line-height: 26/16;
         padding: 3.2rem;
+        &.tile-att {
+            &:before {
+                background-image: url("data:image/svg+xml,%3Csvg width='138' height='100' viewBox='0 0 138 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='0.9' cx='94.5' cy='94.5' r='94' stroke='white' stroke-dasharray='6 6'/%3E%3C/svg%3E%0A");
+            }
+        }
+        &:before {
+            opacity: 1;
+        }
         .tile-title {
             margin-bottom: 16px;
             text-transform: uppercase;
@@ -500,6 +556,9 @@
         border-radius: 16px;
         padding: 48/10rem 48/10rem 38/10rem 48/10rem;
         text-align: left;
+        &:before {
+            opacity: 1;
+        }
         .tile-ico {
             width: 6.4rem;
             height: 6.4rem;
@@ -537,11 +596,16 @@
     .item-tile-menu {
         height: 200px;
         border-radius: 15px;
+        &:not(.tile-main, .tile-main-small) {
+            background-image: none;
+        }
         &.tile-main {
             height: 400px;
+            background-size: 131px auto;
         }
         &.tile-main-small {
             height: 384px;
+            background-size: 131px auto;
         }
         .tile-title-wrap {
             padding: 2.4rem 1rem 2.4rem 3.2rem;

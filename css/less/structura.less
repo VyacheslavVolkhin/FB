@@ -54,11 +54,26 @@ html {
 	min-width: var(--min);
 	width: 100%;
 }
+
 .wrap {
 	overflow: hidden;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='1920' height='933' viewBox='0 0 1920 933' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1813' cy='403' r='529.5' stroke='%23242424' stroke-opacity='0.3' stroke-dasharray='6 6'/%3E%3Ccircle cx='190.5' cy='83.5' r='349' stroke='%23242424' stroke-opacity='0.3' stroke-dasharray='6 6'/%3E%3C/svg%3E%0A");
+        background-position: center top;
+        background-size: 1920px auto;
+        background-repeat: no-repeat;
+    }
 	&>.cnt-section {
 		flex-shrink: 0;
 	}
