@@ -20,6 +20,14 @@ $(document).ready(function(){
 	  return this;
 	};
     
+    //info tile
+    $('.item-tile-info-main').on('click', function() {
+        if ($(window).innerWidth() < 1024) {
+            $(this).toggleClass('active');
+            return false;
+        }
+    })
+    
 	
     //popup block
 	$('.js-popup-wrap .js-btn-toggle').on('click', function() {
@@ -143,7 +151,7 @@ $(document).ready(function(){
             dots: false,
             slidesToShow: 2,
             variableWidth: true,
-            infinite: false,
+            infinite: true,
             adaptiveHeight: false,
             prevArrow: '<span class="btn-action-ico ico-arrow ico-arrow-prev"></span>',
             nextArrow: '<span class="btn-action-ico ico-arrow ico-arrow-next"></span>',

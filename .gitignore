@@ -1,4 +1,5 @@
 /node_modules
 /_doc
 *.zip
+*.idea
 *.DS_Store

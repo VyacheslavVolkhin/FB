@@ -1,6 +1,109 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.popup-box {
+    display: none;
+    &.fancybox-content {
+        overflow: visible;
+        color: #fff;
+        background: linear-gradient(92.44deg, #3BADFF 0%, #26A4FF 100%), #C4C4C4;
+        border-radius: 16px;
+        width: 62rem;
+        padding: 5.6rem;
+    }
+    .fancybox-button.fancybox-close-small {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &:hover {
+            background: none;
+            &:after, &:before {
+                background: #fff;
+            }
+        }
+        &:after, &:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -1px 0 0 -10px;
+            .t-rotate(45deg);
+            border-radius: 1px;
+            transition: background ease 0.2s;
+        }
+        &:before {
+            .t-rotate(-45deg);
+        }
+        * {
+            display: none;
+        }
+    }
+    .popup-title-wrap {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 30/20;
+        margin-bottom: 24px;
+    }
+    .popup-title {
+        font-size: 5rem;
+        line-height: 60/50;
+        font-weight: bold;
+        margin: 0 0 20px 0;
+    }
+    .frm-row {
+        margin: 0;
+    }
+    .frm-field {
+        margin-bottom: 2.4rem;
+    }
+    .frm-row-submit {
+        padding-top: 1.6rem;
+    }
+    .frm-wrap {
+        max-width: 374px;
+        margin: 0 auto;
+    }
+    .form-input {
+        height: 6.6rem;
+        background: #FFFFFF;
+        box-shadow: 0px 12px 20px rgba(101, 65, 32, 0.15);
+        border-radius: 8px;
+        border: none;
+        padding: 0 10px 0 2.8rem;
+        font-size: 1em;
+    }
+    .btn {
+        height: 6.8rem;
+        width: 100%;
+        background: linear-gradient(180deg, #FFA858 0%, #FF8C21 100%);
+        box-shadow: 0px 12px 20px rgba(101, 65, 32, 0.15);
+        border-radius: 8px;
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+    .frm-select {
+        label {
+            &:after {
+                background-image: url(../img/icons/check-clear.svg);
+                background-size: 100% auto;
+                background-color: #fff;
+                border-radius: 3px;
+            }
+            &:before {
+                background-color: #fff;
+            }
+        }
+    }
+}
+.fancybox-bg {
+    background: fade(#000, 70);
+}
 .calc-box {
     margin-bottom: 7.2rem;
     .item-wrap {
@@ -503,6 +606,12 @@
     }
 }
 @media (max-width: 1023px) {
+    .popup-box {
+        &.fancybox-content {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+    }
     .steps-box {
         .item-wrap {
             &:nth-child(3n+3) {
@@ -823,7 +932,7 @@
             min-height: 63rem;
             align-items: flex-end;
             position: relative;
-            overflow: hidden;
+            //overflow: hidden;
             &:before {
                 content: "";
                 display: block;
@@ -1037,6 +1146,19 @@
                 padding: 0 10px;
                 margin-bottom: 20px;
                 width: 33.33%;
+            }
+        }
+        .slick-slide {
+            transition: opacity ease 0.2s;
+            &:not(.slick-active) {
+                opacity: 0;
+                pointer-events: none;
+            }
+            &.slick-active {
+                &~.slick-slide {
+                    opacity: 1;
+                    pointer-events: inherit;
+                }
             }
         }
     }

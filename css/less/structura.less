@@ -97,6 +97,36 @@ html {
 		transition: all ease 0.2s;
 	}
 }
+.footer {
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 10px 30px fade(#000, 30);
+    font-size: 14px;
+    line-height: 20/14;
+    padding: 24px 0 10px 0;
+    .logo-wrap {
+        width: 98px;
+        margin: 0 auto 36px auto;
+    }
+    .phone-number {
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    .info-wrap {
+        margin-bottom: 20px;
+    }
+    .info-outer-wrap {
+        border-top: 1px solid #c4c4c4;
+        display: block;
+        padding-top: 20px;
+    }
+    a {
+        color: inherit;
+        &:hover {
+            color: var(--clr-att);
+        }
+    }
+}
 .header {
     padding: 16px 0 24px 0;
     .logo {
@@ -123,7 +153,58 @@ html {
         width: 100%;
     }
 }
+@media (max-width: 599px) {
+    .footer {
+        .phone-wrap {
+            text-align: center;
+            font-size: 15px;
+            line-height: 22/15;
+            margin-bottom: 70px;
+        }
+        .phone-title, .phone-number {
+            display: inline;
+        }
+    }
+}
+@media (min-width: 600px) {
+    .footer {
+        .logo-wrap {
+            width: 172px;
+        }
+        .info-outer-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+        .info-wrap {
+            &:first-child {
+                min-width: 160px;
+            }
+            &:last-child {
+                min-width: 160px;
+                text-align: right;
+            }
+        }
+        .phone-wrap {
+            text-align: right;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 600;
+            white-space: nowrap;
+            position: absolute;
+            top: 20px;
+            right: var(--paddingContainer);
+            z-index: 2;
+        }
+    }
+}
 @media (min-width: 1024px) {
+    .footer {
+        .info-wrap {
+            &:nth-child(2) {
+                font-size: 16px;
+            }
+        }
+    }
     .header {
         padding: 48/10rem 0 64/10rem 0;
         .logo {
