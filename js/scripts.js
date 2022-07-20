@@ -163,6 +163,7 @@ $(document).ready(function(){
                         variableWidth: false,
                         prevArrow: false,
                         nextArrow: false,
+                        infinite: false,
                     }
                 },
             ]

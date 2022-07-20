@@ -796,6 +796,12 @@ body {
           box-shadow: 0px 15px 70px rgba(12, 35, 70, 0.08);
 }
 .item-tile-info-main .tile-desc-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -803,17 +809,22 @@ body {
   right: 0;
   z-index: 4;
   background-color: #fff;
-  padding: 16px 20px 24px 24px;
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.5;
   -webkit-transition: opacity ease 0.2s;
   transition: opacity ease 0.2s;
   opacity: 0;
+  overflow: hidden;
+}
+.item-tile-info-main .tile-text-wrap {
+  display: block;
+  max-height: 100%;
+  padding: 16px 20px 24px 24px;
   overflow: auto;
   -ms-overflow-style: none;
 }
-.item-tile-info-main .tile-desc-wrap::-webkit-scrollbar {
+.item-tile-info-main .tile-text-wrap::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
@@ -1383,13 +1394,17 @@ body {
   font-size: 2rem;
   line-height: 1.5;
   margin-bottom: 24px;
+  max-width: 22.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .popup-box .popup-title {
   font-size: 50px;
   font-size: 5rem;
   line-height: 1.2;
   font-weight: bold;
-  margin: 0 0 20px 0;
+  margin: 0 auto 20px auto;
+  max-width: 10em;
 }
 .popup-box .frm-row {
   margin: 0;
@@ -1976,6 +1991,9 @@ body {
   .popup-box.fancybox-content {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+  .popup-box .popup-title {
+    font-size: 4rem;
   }
   .steps-box .item-wrap:nth-child(3n+3):before {
     display: none;

@@ -213,6 +213,8 @@
     .shadow();
     
     .tile-desc-wrap {
+        display: flex;
+        align-items: center;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -220,11 +222,16 @@
         right: 0;
         z-index: 4;
         background-color: #fff;
-        padding: 16px 20px 24px 24px;
         font-size: 1.8rem;
         line-height: 27/18;
         transition: opacity ease 0.2s;
         opacity: 0;
+        overflow: hidden;
+    }
+    .tile-text-wrap {
+        display: block;
+        max-height: 100%;
+        padding: 16px 20px 24px 24px;
         overflow: auto;
         -ms-overflow-style: none;
         &::-webkit-scrollbar {
